@@ -1,0 +1,12 @@
+
+.character-card {
+  @apply relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:-translate-y-1 hover:shadow-md;
+}
+
+.character-universe-badge {
+  @apply absolute top-2 right-2 bg-primary/90 text-primary-foreground text-xs font-medium py-1 px-2 rounded-full;
+}
+
+.character-card .card-footer {
+  @apply mt-auto pt-4 flex justify-end gap-2;
+}

@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 260 70% 50%;
+    --primary-foreground: 240 10% 98%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 260 50% 96%;
+    --accent-foreground: 260 50% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 260 70% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 260 70% 50%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 240 10% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 240 10% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 240 10% 98%;
+
+    --primary: 260 70% 60%;
+    --primary-foreground: 240 10% 98%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 10% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 6% 70%;
+
+    --accent: 260 20% 16%;
+    --accent-foreground: 260 20% 90%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 260 70% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 260 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 260 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .character-card {
+    @apply relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:-translate-y-1 hover:shadow-md;
+  }
+  
+  .character-universe-badge {
+    @apply absolute top-2 right-2 bg-primary/90 text-primary-foreground text-xs font-medium py-1 px-2 rounded-full;
+  }
+}
